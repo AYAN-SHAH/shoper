@@ -4,7 +4,7 @@ const popular = () => {
 	const [popularproducts, setpopularproducts] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:3000/popularinwomen")
+		fetch("https://shoper-backend-production.up.railway.app/popularinwomen")
 			.then((response) => response.json())
 			.then((data) => setpopularproducts(data));
 	}, []);

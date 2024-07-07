@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
 	const [cartitem, setcartitem] = useState(getdefaultcart());
 
 	useEffect(() => {
-		fetch("http://localhost:3000/allproducts")
+		fetch("https://shoper-backend-production.up.railway.app/allproducts")
 			.then((Response) => Response.json())
 			.then((data) => setAll_Product(data));
 	}, []);
@@ -38,7 +38,7 @@ const ShopContextProvider = (props) => {
 				totalamount += iteminfo.new_price * cartitem[item];
 			}
 		}
-		return totalamount;
+ 		return totalamount;
 	};
 
 	const gettotalcartitems = () => {
